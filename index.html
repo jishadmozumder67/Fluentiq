@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fluentiq — IELTS Practice</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f6fc;color:#172544}
+header{background:#172544;color:white;padding:30px 20px}
+header div,main,footer{max-width:900px;margin:auto}
+h1{margin:0;font-size:36px}
+header p{color:#cbd6ef}
+nav{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+button{background:#315efb;color:white;border:0;padding:12px 18px;border-radius:10px;cursor:pointer;font-size:15px}
+button:hover{background:#2248c9}
+nav button{background:white;color:#172544;border:1px solid #dce3ef}
+nav button.active{background:#315efb;color:white}
+main{padding:0 20px}
+.card{background:white;border:1px solid #dce3ef;border-radius:18px;padding:25px;margin-bottom:20px}
+h2{margin-top:0}
+.passage{background:#f3f6fc;padding:20px;border-radius:12px;line-height:1.8}
+label{display:block;margin:20px 0 8px;font-weight:bold}
+select,textarea{width:100%;padding:12px;border:1px solid #ccd5e5;border-radius:10px;font:inherit}
+textarea{min-height:260px;line-height:1.7}
+.result{line-height:1.7;font-weight:bold}
+.note{color:#66738c;font-size:14px;line-height:1.6}
+.timer{font-size:48px;font-weight:bold;margin:25px 0}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+footer{padding:25px 20px;color:#66738c;font-size:13px}
+</style>
+</head>
+
+<body>
+<header>
+  <div>
+    <h1>Fluentiq</h1>
+    <p>A little practice. A little more confidence.</p>
+  </div>
+</header>
+
+<main>
+  <nav aria-label="Practice skills">
+    <button class="active" onclick="openPage('reading',this)">Reading</button>
+    <button onclick="openPage('listening',this)">Listening</button>
+    <button onclick="openPage('writing',this)">Writing</button>
+    <button onclick="openPage('speaking',this)">Speaking</button>
+  </nav>
+
+  <section id="reading" class="page card">
+    <h2>Reading practice</h2>
+    <p class="note">A short original exercise. Read the passage, then answer.</p>
+
+    <div class="passage">
+      In 2022, a public library converted its unused rooftop into
+      a community garden. Volunteers initially grew vegetables
+      in twelve wooden containers. Within a year, the garden
+      expanded to twenty containers. Local residents helped with
+      watering, while a nearby school organised monthly visits.
+      The library reported that the project encouraged neighbours
+      to meet and exchange gardening knowledge. However, limited
+      access to water remained a challenge during the summer.
+    </div>
+
+    <label for="r1">1. Where was the garden created?</label>
+    <select id="r1">
+      <option value="">Choose an answer</option>
+      <option value="a">Beside a school</option>
+      <option value="b">On a library rooftop</option>
+      <option value="c">Inside a park</option>
+    </select>
+
+    <label for="r2">2. How many containers were there initially?</label>
+    <select id="r2">
+      <option value="">Choose an answer</option>
+      <option value="a">Twelve</option>
+      <option value="b">Twenty</option>
+      <option value="c">Thirty</option>
+    </select>
+
+    <label for="r3">3. What was a challenge during summer?</label>
+    <select id="r3">
+      <option value="">Choose an answer</option>
+      <option value="a">Too many school visits</option>
+      <option value="b">A lack of volunteers</option>
+      <option value="c">Limited access to water</option>
+    </select>
+
+    <div class="actions">
+      <button onclick="checkReading()">Check answers</button>
+    </div>
+    <p id="readingResult" class="result" aria-live="polite"></p>
+  </section>
+
+  <section id="listening" class="page card" hidden>
+    <h2>Listening practice</h2>
+    <p>Read the questions, then play the announcement.</p>
+    <p class="note">This sample uses your browser's computer-generated voice.</p>
+
+    <button onclick="playListening()">▶ Play announcement</button>
+
+    <label for="l1">1. On which day does the course begin?</label>
+    <select id="l1">
+      <option value="">Choose an answer</option>
+      <option value="a">Monday</option>
+      <option value="b">Wednesday</option>
+      <option value="c">Saturday</option>
+    </select>
+
+    <label for="l2">2. How much does each lesson cost?</label>
+    <select id="l2">
+      <option value="">Choose an answer</option>
+      <option value="a">£8</option>
+      <option value="b">£12</option>
+      <option value="c">£20</option>
+    </select>
+
+    <div class="actions">
+      <button onclick="checkListening()">Check answers</button>
+    </div>
+    <p id="listeningResult" class="result" aria-live="polite"></p>
+  </section>
+
+  <section id="writing" class="page card" hidden>
+    <h2>Writing — Task 2 practice</h2>
+    <div class="passage">
+      Some people think university students should have part-time
+      jobs. Others believe they should focus entirely on studying.
+      Discuss both views and give your own opinion.
+    </div>
+
+    <p>Aim to write at least 250 words.</p>
+    <label for="essay">Your answer</label>
+    <textarea id="essay" placeholder="Start writing here..."></textarea>
+    <p><strong id="wordCount">0</strong> words</p>
+    <p id="saveStatus" class="note" aria-live="polite"></p>
+    <p class="note">This version saves your draft in this browser.
+      AI marking has not been connected yet.</p>
+  </section>
+
+  <section id="speaking" class="page card" hidden>
+    <h2>Speaking — Part 2 practice</h2>
+    <div class="passage">
+      <strong>Describe a skill you would like to learn.</strong>
+      <p>You should say:</p>
+      <ul>
+        <li>What the skill is</li>
+        <li>Why you want to learn it</li>
+        <li>How you would learn it</li>
+        <li>How it could help you in the future</li>
+      </ul>
+    </div>
+
+    <p id="timerLabel">Prepare for one minute, then speak for up to two minutes.</p>
+    <div id="timerDisplay" class="timer" role="timer">00:00</div>
+    <div class="actions">
+      <button onclick="startTimer(60,'Preparation')">Prepare: 1 minute</button>
+      <button onclick="startTimer(120,'Speaking')">Speak: 2 minutes</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+    <p class="note">Practise aloud. This version provides a timer;
+      it does not record or assess your voice.</p>
+  </section>
+</main>
+
+<footer>
+  Original mini exercises · Independent IELTS practice · No official band scores
+</footer>
+
+<script>
+const el = id => document.getElementById(id);
+
+function openPage(id, button) {
+  document.querySelectorAll('.page').forEach(page => {
+    page.hidden = page.id !== id;
+  });
+  document.querySelectorAll('nav button').forEach(item => {
+    item.classList.remove('active');
+  });
+  button.classList.add('active');
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+}
+
+function checkReading() {
+  const answers = [el('r1').value, el('r2').value, el('r3').value];
+  if (answers.includes('')) {
+    el('readingResult').textContent = 'Please answer all three questions.';
+    return;
+  }
+  const correct = ['b', 'a', 'c'];
+  const score = answers.filter((answer, i) => answer === correct[i]).length;
+  el('readingResult').textContent =
+    `Your score: ${score}/3. Answers: 1. Library rooftop; ` +
+    '2. Twelve containers; 3. Limited access to water.';
+}
+
+function playListening() {
+  if (!('speechSynthesis' in window)) {
+    el('listeningResult').textContent =
+      'Speech playback is unavailable in this browser.';
+    return;
+  }
+  speechSynthesis.cancel();
+  const text =
+    'Welcome to the Riverside Learning Centre. Our new photography ' +
+    'course begins on Monday at six in the evening. Each lesson costs ' +
+    'twelve pounds. You do not need to bring a camera for the first class.';
+  const voice = new SpeechSynthesisUtterance(text);
+  voice.lang = 'en-GB';
+  voice.rate = 0.9;
+  voice.onerror = () => {
+    el('listeningResult').textContent =
+      'Audio could not play. Check your sound settings and try again.';
+  };
+  speechSynthesis.speak(voice);
+}
+
+function checkListening() {
+  if (!el('l1').value || !el('l2').value) {
+    el('listeningResult').textContent = 'Please answer both questions.';
+    return;
+  }
+  const score = Number(el('l1').value === 'a') +
+                Number(el('l2').value === 'b');
+  el('listeningResult').textContent =
+    `Your score: ${score}/2. Answers: Monday and £12 per lesson.`;
+}
+
+function countWords() {
+  const text = el('essay').value.trim();
+  el('wordCount').textContent = text ? text.split(/\s+/).length : 0;
+}
+
+try {
+  el('essay').value = localStorage.getItem('fluentiq-writing') || '';
+} catch {
+  el('saveStatus').textContent = 'Draft storage is unavailable.';
+}
+countWords();
+
+el('essay').addEventListener('input', () => {
+  countWords();
+  try {
+    localStorage.setItem('fluentiq-writing', el('essay').value);
+    el('saveStatus').textContent = 'Draft saved in this browser.';
+  } catch {
+    el('saveStatus').textContent =
+      'Draft could not be saved. Copy your work before closing.';
+  }
+});
+
+let timer;
+
+function displayTime(seconds) {
+  el('timerDisplay').textContent =
+    String(Math.floor(seconds / 60)).padStart(2, '0') + ':' +
+    String(seconds % 60).padStart(2, '0');
+}
+
+function startTimer(seconds, label) {
+  clearInterval(timer);
+  let remaining = seconds;
+  el('timerLabel').textContent = label + ' time';
+  displayTime(remaining);
+  timer = setInterval(() => {
+    remaining--;
+    displayTime(remaining);
+    if (remaining <= 0) {
+      clearInterval(timer);
+      el('timerLabel').textContent = label + ' finished.';
+    }
+  }, 1000);
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  displayTime(0);
+  el('timerLabel').textContent = 'Ready for another attempt.';
+}
+</script>
+</body>
+</html>
