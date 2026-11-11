@@ -1,0 +1,84 @@
+/* Fluentiq Midnight — cool surfaces, coherent iconography and disciplined motion. */
+:root{--paper:#ffffff;--canvas:#f3f6fa;--text:#14243c;--sub:#60728a;--edge:#dce5ef;--accent:#087f83;--accent-soft:#e4f3f1;--deep:#101d34;--surface2:#edf2f8;--bg:var(--canvas);--surface:var(--paper);--ink:var(--text);--muted:var(--sub);--line:var(--edge);--blue:var(--accent);--violet:#637ea9;--good:#238454;--bad:#c13f3a;color-scheme:light}
+html[data-theme=dark]{--paper:#15243a;--canvas:#0c1728;--text:#edf3fc;--sub:#a4b5cb;--edge:#293c55;--accent:#53d2c0;--accent-soft:#1b3d43;--deep:#081323;--surface2:#1c2e46;--bg:var(--canvas);--surface:var(--paper);--ink:var(--text);--muted:var(--sub);--line:var(--edge);--blue:var(--accent);--violet:#98b5ed;--good:#8bd6ad;--bad:#f4a19b;color-scheme:dark}
+html body.studio{background:var(--canvas)!important;color:var(--text)!important;-webkit-font-smoothing:antialiased}
+html body.studio:before,html body.studio:after{display:none!important;background:none!important;animation:none!important}
+.studio .studio-header{background:var(--paper)!important;border-color:var(--edge)!important;box-shadow:none!important;backdrop-filter:none!important}
+.studio .studio-brand{gap:10px}.studio .studio-brand>span{letter-spacing:-1.1px;font-weight:700}
+.studio .fluentiq-brand-symbol{display:block;object-fit:contain;border-radius:11px;filter:none!important;box-shadow:none!important}
+.studio .studio-brand .fluentiq-brand-symbol{width:39px!important;height:39px!important}
+.studio .studio-brand-dot,.studio .studio-kicker i{color:var(--accent);background-color:transparent}
+.studio .studio-kicker i{background:var(--accent)}
+.studio .studio-header .iconbtn,.studio .studio-header .avatar{width:38px!important;height:38px!important;display:grid;place-items:center;border:1px solid var(--edge)!important;border-radius:12px!important;background:var(--paper)!important;color:var(--text)!important;box-shadow:none!important}
+.studio .studio-header .avatar{background:var(--surface2)!important;font-weight:700}
+.studio .studio-header .iconbtn svg{width:21px;height:21px;stroke-width:1.7}
+.studio .d-page-heading{background:linear-gradient(115deg,#101d34,#18394a)!important;border:1px solid #23465a!important;color:#f0f7ff!important;box-shadow:none!important;overflow:hidden}
+.studio .d-page-heading:before,.studio .d-page-heading:after{display:none!important}
+.studio .d-page-heading h1{color:#f0f7ff!important;font-weight:650!important;letter-spacing:-1.5px!important}
+.studio .d-page-heading p,.studio .d-page-heading .d-date{color:#b9cedc!important}
+.studio .d-page-heading .d-eyebrow{color:#93d5ce!important}
+.studio .d-page-heading .d-eyebrow:before{background:#53d2c0!important}
+.studio .p-hero-emblem{display:none!important}
+.studio :is(.d-goal-card,.d-progress-card,.d-tasks-card,.d-week,.d-insight,.studio-panel,.studio-course,.studio-set,.sgroup){background:var(--paper)!important;border-color:var(--edge)!important;box-shadow:0 3px 14px #10243c03!important}
+.studio .d-goal-type{background:var(--surface2)!important;color:var(--sub)!important;border-color:var(--edge)!important}
+.studio .d-goal-picker button.selected,.studio .studio-levels button.active,.studio .studio-examiners button.selected{background:var(--accent-soft)!important;border-color:var(--accent)!important;color:var(--accent)!important;box-shadow:inset 0 0 0 1px var(--accent)!important}
+.studio .d-goal-picker button.selected span,.studio .d-goal-picker button.selected b,.studio .studio-levels button.active>span{color:var(--accent)!important}
+.studio .studio-lab-banner.p-language-feature{background:var(--surface2)!important;border-color:var(--edge)!important}
+.studio .p-language-feature:before,.studio .p-language-feature:after{display:none!important}
+.studio .p-language-art>b{background:#101d34!important;color:#53d2c0!important;border-color:#294a62!important;box-shadow:none!important}
+.studio .p-art-orbit{border-color:var(--edge)!important}
+.studio .p-art-word{background:var(--paper)!important;color:var(--text)!important;border-color:var(--edge)!important;box-shadow:none!important}
+.studio .p-art-word:before{background:var(--accent)!important}
+.studio .btn.primary{background:var(--text)!important;border-color:var(--text)!important;color:var(--paper)!important;box-shadow:none!important}
+.studio .btn.primary:hover{background:var(--accent)!important;border-color:var(--accent)!important;color:#fff!important}
+.studio .studio-set-ticks i{background:var(--edge)!important}.studio .studio-set-ticks i.hit{background:var(--good)!important}
+.studio .studio-levels{background:var(--paper)!important;border-color:var(--edge)!important}.studio .studio-levels button{border-color:var(--edge)!important}
+.studio .d-task-marker,.studio .d-next-symbol{background:var(--accent-soft)!important;color:var(--accent)!important;border-color:var(--edge)!important}
+/* Compact custom SVG navigation: same optical size and stroke on all four destinations. */
+.studio #mobileNav{background:var(--paper)!important;border-top:1px solid var(--edge)!important;box-shadow:0 -3px 16px #10243c04!important;padding:7px 12px calc(7px + env(safe-area-inset-bottom))!important;gap:5px;backdrop-filter:none!important}
+.studio #mobileNav button{position:relative;min-height:55px!important;font-family:inherit;font-size:.72rem!important;font-weight:650!important;letter-spacing:.005em;gap:5px;line-height:1.25;box-shadow:none!important;border:0!important;background:transparent!important;color:var(--sub)!important;border-radius:14px!important;transition:color .12s,background .12s;transform:none!important}
+.studio #mobileNav button .fq-nav-icon{width:23px!important;height:23px!important;stroke-width:1.7;flex-shrink:0}
+.studio #mobileNav button.active{background:var(--accent-soft)!important;color:var(--accent)!important}
+.studio #mobileNav button:before,.studio #mobileNav button:after{display:none!important}
+.studio #mobileNav button.active .fq-nav-icon{stroke-width:1.9}
+html.large-text .studio #mobileNav button{font-size:.8rem!important}
+/* One short web reveal; packaged Android uses the native overlay instead. */
+html.android-packaged #splash{display:none!important}
+#splash.studio-splash{background:#101d34!important;transition:opacity .16s ease-out!important}
+.studio-splash-lockup:before{content:'FLUENTIQ / LEARNING STUDIO'!important;color:#89abbf!important;margin-bottom:23px!important}
+.studio-splash-lockup .fluentiq-brand-symbol{width:80px!important;height:80px!important;border-radius:22px;animation:none!important;filter:none!important;margin:0 auto 21px!important}
+.studio-splash-word{color:#eff6ff!important;font-size:41px!important;font-weight:650!important;letter-spacing:-1.4px!important}.studio-splash-word>span{color:#53d2c0!important}
+.studio-splash-lockup p{color:#adc4d6!important}
+.studio-splash-rule:before{background:#53d2c0!important}
+/* No full-screen filters, ambient movement or stacked page animations. */
+.studio *, .studio *:before,.studio *:after{animation-delay:0s!important}
+.studio .studio-enter,.studio #main.pg-in>*,.studio .d-card,.studio .p-language-art *{animation:none!important}
+.studio .studio-course:hover,.studio .studio-set:hover,.studio .option:not(:disabled):hover{transform:none!important}
+@media(max-width:700px){.studio .studio-header{height:72px!important;padding:0 20px!important}.studio .studio-brand>span{font-size:25px!important}.studio .studio-utility{gap:0;justify-content:space-between}.studio .studio-utility button{font-size:10px!important;padding:8px 5px!important}.studio .d-page-heading{min-height:212px;padding:28px!important;border-radius:22px}.studio .d-page-heading h1{font-size:36px!important;line-height:1.18!important}.studio .d-page-heading>div:first-child{padding-right:0}.studio .d-page-heading p{font-size:12px!important;max-width:290px}.studio .d-page-heading .d-date{font-size:10px!important}}
+.studio .p-language-art>b{font-size:0!important;background:#101d34 url('./brand-icon.png') center/cover no-repeat!important}
+.studio .p-language-art>b span{display:none!important}
+.studio .studio-header .fluentiq-brand-symbol{animation:none!important}
+/* Explicit contrast in both themes: the featured card uses a light surface. */
+.studio .studio-lab-banner.p-language-feature{color:var(--text)!important;background:var(--surface2)!important;opacity:1!important}
+.studio .p-language-feature h2{color:var(--text)!important;opacity:1!important;text-shadow:none!important}
+.studio .p-language-feature p,.studio .p-feature-actions>span{color:var(--sub)!important;opacity:1!important}
+.studio .p-language-feature .studio-kicker{color:var(--accent)!important;opacity:1!important}
+.studio .p-feature-actions .btn.primary{background:var(--text)!important;border-color:var(--text)!important;color:var(--paper)!important}
+.studio .p-feature-actions .btn.primary:hover{background:var(--accent)!important;border-color:var(--accent)!important;color:#fff!important}
+.studio .studio-voice-choices select{width:100%;max-width:100%;font-size:.85rem!important;min-height:48px}
+.studio .studio-voice-choices small{color:var(--sub);font-size:.8rem;line-height:1.6}
+/* Short identity sequence for the website; Android renders this natively. */
+#splash .studio-splash-lockup{animation:none!important;transform:none!important;will-change:auto}
+#splash .studio-splash-lockup .fluentiq-brand-symbol{animation:fq-mark-arrive .46s cubic-bezier(.2,.7,.2,1) both!important}
+#splash .studio-splash-word{animation:fq-type-arrive .32s .12s ease-out both!important}
+#splash .studio-splash-lockup p,#splash .studio-splash-lockup:before{animation:fq-type-arrive .28s .22s ease-out both!important}
+#splash .studio-splash-rule:before{animation:fq-progress .65s ease-out both!important}
+@keyframes fq-mark-arrive{from{opacity:0;transform:translate3d(0,8px,0) scale(.94)}to{opacity:1;transform:translate3d(0,0,0) scale(1)}}
+@keyframes fq-type-arrive{from{opacity:0;transform:translate3d(0,5px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+html.rm #splash *,html.rm #splash *:before{animation:none!important;transition:none!important}
+@media(prefers-reduced-motion:reduce){#splash *,#splash *:before{animation:none!important;transition:none!important}}
+html:not([data-theme=dark]) .studio .p-language-feature h2{color:#14243c!important}
+html:not([data-theme=dark]) .studio .p-language-feature p,html:not([data-theme=dark]) .studio .p-feature-actions>span{color:#52677f!important}
+html:not([data-theme=dark]) .studio .p-language-feature .studio-kicker{color:#076b70!important}
+html[data-theme=dark] .studio .p-language-feature h2{color:#edf3fc!important}
+html[data-theme=dark] .studio .p-language-feature p,html[data-theme=dark] .studio .p-feature-actions>span{color:#a4b5cb!important}

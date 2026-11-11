@@ -1,0 +1,70 @@
+/* Fluentiq 3.3.3 — accessible controls, coherent surfaces and lightweight motion. */
+.studio #mobileNav button{min-height:58px!important;min-width:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;font-size:.875rem!important;font-weight:750!important;letter-spacing:0;line-height:1.2}
+.studio #mobileNav button span{font-size:inherit!important;font-weight:inherit!important}
+.studio #mobileNav button svg,.studio #mobileNav .tqi{height:22px!important;width:22px!important;stroke-width:1.8}
+.studio #mobileNav button.active{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent)}
+.studio .layout{padding-bottom:104px!important}
+.studio .settings-wrap .sgroup{border-radius:20px!important;padding:24px!important}
+.studio .settings-wrap .sgroup>h3{font-size:.9rem;font-weight:750;letter-spacing:.08em}
+.studio .srow{gap:18px;padding:20px 0;align-items:center}
+.studio .srow b{font-size:1rem;line-height:1.45;font-weight:700}
+.studio .srow small{font-size:.85rem;line-height:1.6}
+.studio .srow .switch{min-width:48px;min-height:28px;flex-shrink:0;touch-action:manipulation}
+.studio .swatches{gap:12px;padding:10px 2px;display:flex;flex-wrap:wrap}
+.studio .swatch{width:30px!important;height:30px!important;min-width:30px;padding:0!important;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--edge)}
+.studio .swatch.on{box-shadow:0 0 0 3px var(--accent)}
+.studio .swatch.custom input{width:100%;height:100%;padding:0;opacity:0;cursor:pointer}
+.studio .srow input[type=range]{min-width:0;accent-color:var(--accent);height:36px;flex:1}
+.studio .srow .btn{min-height:44px;font-size:.85rem}
+.studio .studio-set{color:var(--text);font-family:inherit;cursor:pointer;text-align:left;width:100%;gap:0;min-height:235px;box-shadow:0 2px 0 #00000004;border-radius:20px!important;touch-action:manipulation}
+.studio .studio-set h2{font-weight:700!important;line-height:1.35;margin-top:24px}
+.studio .studio-set-bottom{gap:12px;align-items:flex-end}
+.studio-set-action{font-size:.72rem;font-weight:700;color:var(--accent);line-height:1.4;text-align:right}
+.studio .studio-set:focus-visible,.studio .studio-session:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.studio .studio-session{width:100%;background:var(--paper);color:var(--text);border:0;border-bottom:1px solid var(--edge);text-align:left;font-family:inherit;cursor:pointer;border-radius:0;transition:background .15s}
+.studio .studio-session:hover{background:var(--surface2)}
+.studio-session-action{font-size:.8rem;font-weight:750;color:var(--accent);text-align:right}
+.studio .studio-folder-list button>b{display:none}
+/* Feedback remains semantic regardless of the chosen accent. */
+.studio .option.correct,.studio .option.correct.selected,.studio .option.correct:disabled{background:#e7f5ed!important;border-color:#238454!important;color:#175c3a!important;box-shadow:inset 0 0 0 1px #238454!important}
+.studio .option.incorrect,.studio .option.incorrect.selected,.studio .option.incorrect:disabled{background:#fcebea!important;border-color:#c13f3a!important;color:#9c2926!important;box-shadow:inset 0 0 0 1px #c13f3a!important}
+.studio .option.correct .optkey{background:#238454!important;border-color:#238454!important;color:#fff!important}
+.studio .option.incorrect .optkey{background:#c13f3a!important;border-color:#c13f3a!important;color:#fff!important}
+.studio .option.correct:after{content:'✓'!important;color:inherit;font-size:1.25rem;font-weight:800}
+.studio .option.incorrect:after{content:'✕'!important;color:inherit;font-size:1.25rem;font-weight:800}
+.studio .explain.good{background:#e7f5ed!important;border:1px solid #a8d6b9!important;border-left:4px solid #238454!important;color:#175c3a!important}
+.studio .explain.bad{background:#fcebea!important;border:1px solid #e5b2af!important;border-left:4px solid #c13f3a!important;color:#9c2926!important}
+.studio .explain.good b,.studio .explain.good p{color:#175c3a!important}
+.studio .explain.bad b,.studio .explain.bad p{color:#9c2926!important}
+html[data-theme=dark] .studio .option.correct,html[data-theme=dark] .studio .explain.good{background:#19392b!important;border-color:#54b884!important;color:#b6eed0!important}
+html[data-theme=dark] .studio .option.incorrect,html[data-theme=dark] .studio .explain.bad{background:#422522!important;border-color:#e07770!important;color:#ffc8c3!important}
+html[data-theme=dark] .studio .explain.good :is(b,p){color:#b6eed0!important}
+html[data-theme=dark] .studio .explain.bad :is(b,p){color:#ffc8c3!important}
+/* Real large-text mode, including parts originally sized in fixed pixels. */
+html.large-text .studio :is(p,.muted,.studio-fineprint,.srow small,.studio-course-skills,.studio-course-foot,.studio-lab-toolbar>small){font-size:.9rem!important;line-height:1.75!important}
+html.large-text .studio :is(.btn,.studio-tabs button,.studio-folder-list span,.studio-session-title h3,.studio-utility button){font-size:.95rem!important}
+html.large-text .studio :is(.option,.srow b,.d-task-copy h3){font-size:1.05rem!important}
+html.large-text .studio :is(.studio-set h2,.studio-course h3){font-size:1.35rem!important}
+html.large-text .studio :is(.studio-kicker,.d-eyebrow,.studio-set-top,.studio-question-context){font-size:.75rem!important}
+html.large-text .studio .question.qtext{font-size:1.55rem!important;line-height:1.55}
+html.large-text .studio .studio-set-top{flex-wrap:wrap;gap:6px}
+/* Opacity/transform only; no blur, path morphing, animated shadows or stacked staggers. */
+#splash.studio-splash{background:#20251f!important;transition:opacity .18s ease-out!important}
+#splash.studio-splash:before,#splash.studio-splash:after{display:none!important}
+.studio-splash-lockup,.studio-splash-word,.studio-splash-lockup p,.studio-splash-lockup:before,.studio-splash-lockup .studio-mark{animation:none!important;clip-path:none!important;filter:none!important;translate:none!important}
+.studio-splash-lockup{animation:fq-identity .3s ease-out both!important;will-change:transform,opacity}
+.studio-splash .studio-mark-line{animation:none!important;stroke-dashoffset:0!important}
+.studio-splash-rule:before{animation:fq-progress .45s ease-out both!important}
+@keyframes fq-identity{from{opacity:.15;transform:translate3d(0,5px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes fq-progress{from{transform:scaleX(.15)}to{transform:scaleX(1)}}
+.studio #main.pg-in>*,.studio .d-card,.studio .d-next-banner,.studio .studio-course,.studio .studio-set,.studio .studio-word,.studio .p-language-art,.studio .p-art-orbit{animation:none!important;animation-delay:0s!important}
+.studio #main.studio-enter{animation:fluentiq-page .18s ease-out both}
+@keyframes fluentiq-page{from{opacity:.6;transform:translate3d(0,3px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+.studio .p-hero-emblem,.studio .p-language-art>*{animation:none!important}
+html.rm *,html.rm *:before,html.rm *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(max-width:700px){.studio .srow{flex-wrap:wrap;gap:12px}.studio .srow>.swatches{flex-basis:100%}.studio .studio-set{min-height:235px;padding:18px!important}.studio .studio-set h2{font-size:1.1rem}.studio .studio-set-top{font-size:.65rem}.studio .studio-set p,.studio .studio-set small{font-size:.75rem}.studio .studio-set-bottom{flex-wrap:wrap}.studio-set-action{font-size:.72rem}.studio .studio-session{grid-template-columns:20px minmax(0,1fr) auto}.studio .srow b{font-size:.98rem}.studio .srow small{font-size:.82rem}.studio .studio-question-canvas .explain p{font-size:.875rem!important}.studio #mobileNav{padding-bottom:calc(7px + env(safe-area-inset-bottom))!important}}
+@media(max-width:350px){.studio #mobileNav button{font-size:.78rem!important}.studio .studio-set-grid{grid-template-columns:1fr}}
+.studio-course .studio-round-arrow{display:none!important}
+
+.studio .s-ctl{min-width:0;flex-shrink:0}.studio .srow.wide .s-ctl{width:100%;flex-basis:100%;display:flex;gap:12px;align-items:center}.studio .srow.wide{flex-wrap:wrap}
