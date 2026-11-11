@@ -1,5 +1,5 @@
-const CACHE="fluentiq-ios-3.3.10-teal-icon-fix-1";
-const CORE=["./","./index.html","./icon.svg","./manifest.webmanifest","./privacy.html","./icons/icon-192.png","./icons/icon-512.png","./fonts/open-sans-400.woff","./fonts/open-sans-600.woff","./fonts/open-sans-700.woff","./fonts/symbols.woff","./ios-support.css","./ios-support.js","./install-ios.html","./icons/apple-touch-icon.png","./icons/fluentiq-teal-180-v3310.png","./icons/fluentiq-teal-192-v3310.png","./icons/fluentiq-teal-512-v3310.png"];
+const CACHE="fluentiq-ios-3.3.10-teal-root-fix-2";
+const CORE=["./","./index.html","./icon.svg","./manifest.webmanifest","./privacy.html","./icons/icon-192.png","./icons/icon-512.png","./fonts/open-sans-400.woff","./fonts/open-sans-600.woff","./fonts/open-sans-700.woff","./fonts/symbols.woff","./ios-support.css","./ios-support.js","./install-ios.html","./icons/apple-touch-icon.png","./fluentiq-teal-180-v3310.png","./fluentiq-teal-192-v3310.png","./fluentiq-teal-512-v3310.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("fluentiq-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET"||u.origin!==self.location.origin||!u.href.startsWith(self.registration.scope))return;

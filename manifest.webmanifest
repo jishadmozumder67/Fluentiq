@@ -10,13 +10,13 @@
   "theme_color": "#20251f",
   "icons": [
     {
-      "src": "./icons/fluentiq-teal-192-v3310.png",
+      "src": "./fluentiq-teal-192-v3310.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./icons/fluentiq-teal-512-v3310.png",
+      "src": "./fluentiq-teal-512-v3310.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
