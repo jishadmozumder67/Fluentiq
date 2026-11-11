@@ -1,0 +1,22 @@
+/* Release component: independent of the retired p-language-feature styles. */
+.fq-language-feature{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(200px,1fr);gap:32px;align-items:center;border:1px solid var(--edge);border-radius:24px;background:var(--surface2);padding:36px;color:var(--text);margin:0 0 34px;isolation:isolate;opacity:1}
+.fq-language-copy{min-width:0}
+.fq-language-feature .fq-language-eyebrow{display:block;font-size:10px;font-weight:750;letter-spacing:.13em;color:#076b70;line-height:1.6}
+.fq-language-feature #fqLanguageHeading{font-size:clamp(28px,3.6vw,38px);font-weight:650;letter-spacing:-1.2px;line-height:1.2;margin:18px 0 16px;color:var(--text)!important;opacity:1!important}
+.fq-language-feature .fq-language-copy>p{font-size:14px;line-height:1.8;margin:0;max-width:440px;color:var(--sub)!important;opacity:1!important}
+.fq-language-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:25px}.fq-language-actions>span{font-size:11px;line-height:1.6;color:var(--sub)}
+.fq-language-graphic{position:relative;display:grid;place-items:center;min-height:200px;grid-template-columns:1fr 1fr;gap:12px;max-width:320px;margin:auto;width:100%;padding:12px}
+.fq-language-graphic img{grid-column:1/-1;grid-row:1;border-radius:27px;width:112px;height:112px;object-fit:contain}
+.fq-language-graphic span{font-size:10px;line-height:1.4;font-weight:600;color:var(--sub);background:var(--paper);border:1px solid var(--edge);padding:8px 12px;border-radius:10px;text-align:center}
+.fq-language-graphic span:last-child{grid-column:1/-1;justify-self:center}
+html[data-theme=dark] .fq-language-feature .fq-language-eyebrow{color:#53d2c0}
+.studio-footer .fq-build-label{color:var(--sub);font-size:10px;font-weight:600;white-space:nowrap;letter-spacing:.02em}
+.fq-opening-symbol{position:relative;display:grid;place-items:center;width:128px;height:128px;margin:0 auto 12px}
+#splash .fq-opening-symbol .fluentiq-brand-symbol{width:78px!important;height:78px!important;margin:0!important;grid-area:1/1}
+.fq-opening-orbit{position:absolute;inset:0;border:1px solid #53d2c02c;border-radius:50%}
+.fq-opening-orbit:before{content:'';position:absolute;inset:-1px;border:2px solid transparent;border-top-color:#53d2c0;border-right-color:#53d2c055;border-radius:50%;animation:fq-orbit-live 1.6s linear infinite!important}
+@keyframes fq-orbit-live{to{transform:rotate(360deg)}}
+@media(max-width:700px){.fq-language-feature{grid-template-columns:1fr;gap:24px;padding:28px 25px}.fq-language-feature #fqLanguageHeading{font-size:31px}.fq-language-feature .fq-language-copy>p{font-size:13px}.fq-language-feature .fq-language-eyebrow{font-size:9px}.fq-language-actions{gap:13px}.fq-language-actions .btn{font-size:12px!important;min-height:44px}.fq-language-graphic{min-height:190px}}
+html.large-text .fq-language-feature .fq-language-copy>p{font-size:1rem!important}
+html.rm .fq-opening-orbit:before{animation:none!important}
+@media(prefers-reduced-motion:reduce){.fq-opening-orbit:before{animation:none!important}}

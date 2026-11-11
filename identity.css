@@ -1,5 +1,5 @@
 /* Fluentiq Midnight — cool surfaces, coherent iconography and disciplined motion. */
-:root{--paper:#ffffff;--canvas:#f3f6fa;--text:#14243c;--sub:#60728a;--edge:#dce5ef;--accent:#087f83;--accent-soft:#e4f3f1;--deep:#101d34;--surface2:#edf2f8;--bg:var(--canvas);--surface:var(--paper);--ink:var(--text);--muted:var(--sub);--line:var(--edge);--blue:var(--accent);--violet:#637ea9;--good:#238454;--bad:#c13f3a;color-scheme:light}
+:root{--paper:#ffffff;--canvas:#f3f6fa;--text:#14243c;--sub:#52677f;--edge:#dce5ef;--accent:#087f83;--accent-soft:#e4f3f1;--deep:#101d34;--surface2:#edf2f8;--bg:var(--canvas);--surface:var(--paper);--ink:var(--text);--muted:var(--sub);--line:var(--edge);--blue:var(--accent);--violet:#637ea9;--good:#238454;--bad:#c13f3a;color-scheme:light}
 html[data-theme=dark]{--paper:#15243a;--canvas:#0c1728;--text:#edf3fc;--sub:#a4b5cb;--edge:#293c55;--accent:#53d2c0;--accent-soft:#1b3d43;--deep:#081323;--surface2:#1c2e46;--bg:var(--canvas);--surface:var(--paper);--ink:var(--text);--muted:var(--sub);--line:var(--edge);--blue:var(--accent);--violet:#98b5ed;--good:#8bd6ad;--bad:#f4a19b;color-scheme:dark}
 html body.studio{background:var(--canvas)!important;color:var(--text)!important;-webkit-font-smoothing:antialiased}
 html body.studio:before,html body.studio:after{display:none!important;background:none!important;animation:none!important}

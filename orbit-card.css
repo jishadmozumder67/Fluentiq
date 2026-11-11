@@ -1,0 +1,12 @@
+/* Restore the original language-card orbit composition around the current mark. */
+.fq-language-graphic.fq-language-orbits{position:relative;display:grid;place-items:center;grid-template-columns:none;height:210px;min-height:0;max-width:340px;width:100%;padding:0;gap:0;margin:auto;pointer-events:none}
+.fq-language-orbits .fq-card-orbit{position:absolute;inset:0 12%;border:1px solid #d3ac952b;border-radius:50%;transform:rotate(-20deg);pointer-events:none}
+.fq-language-orbits .fq-card-orbit:after{content:'';position:absolute;inset:16px -17px;border:1px solid #d3ac9519;border-radius:50%;transform:rotate(55deg)}
+.fq-language-graphic.fq-language-orbits img{position:relative;z-index:1;grid-area:1/1;width:115px;height:115px;border-radius:30px;transform:rotate(-10deg);object-fit:contain;box-shadow:0 15px 40px #161b141f}
+.fq-language-graphic.fq-language-orbits .fq-orbit-label{position:absolute;z-index:2;display:block;font-size:10px;line-height:1.4;padding:9px 14px;color:var(--text);border:1px solid #d3ac952b;background:var(--paper);border-radius:9px;box-shadow:0 8px 22px #161b141a;grid-column:auto;justify-self:auto;font-weight:400;white-space:nowrap}
+.fq-language-orbits .fq-label-one{top:7px;left:7%}.fq-language-orbits .fq-label-two{right:4%;top:69px}.fq-language-orbits .fq-label-three{bottom:2px;left:12%}
+@keyframes fq-card-label-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.studio .fq-language-orbits .fq-label-one{animation:fq-card-label-enter .7s .12s both!important}.studio .fq-language-orbits .fq-label-two{animation:fq-card-label-enter .7s .18s both!important}.studio .fq-language-orbits .fq-label-three{animation:fq-card-label-enter .7s .24s both!important}
+@media(max-width:700px){.fq-language-graphic.fq-language-orbits{height:140px;min-height:140px;margin:13px 12px 0;max-width:none;width:calc(100% - 24px)}.fq-language-graphic.fq-language-orbits img{height:86px;width:86px;border-radius:23px}.fq-language-graphic.fq-language-orbits .fq-orbit-label{font-size:8px;padding:7px 10px}.fq-language-orbits .fq-card-orbit{inset:0 8%}.fq-language-orbits .fq-label-one{top:0;left:0}.fq-language-orbits .fq-label-two{top:44px;right:0}.fq-language-orbits .fq-label-three{bottom:0;left:7%}}
+html.rm .studio .fq-language-orbits .fq-orbit-label{animation:none!important}
+@media(prefers-reduced-motion:reduce){.studio .fq-language-orbits .fq-orbit-label{animation:none!important}}

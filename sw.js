@@ -1,4 +1,4 @@
-const CACHE="fluentiq-3.3.5-d96728f1a240";
+const CACHE="fluentiq-3.3.10-2c25edce60b7";
 const CORE=["./","./index.html","./icon.svg","./manifest.webmanifest","./privacy.html","./refinements.css","./refinements.js","./identity.css","./brand-icon.png","./icons/icon-192.png","./icons/icon-512.png","./fonts/open-sans-400.woff","./fonts/open-sans-600.woff","./fonts/open-sans-700.woff","./fonts/symbols.woff"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("fluentiq-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
