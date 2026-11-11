@@ -1,13 +1,13 @@
 {
   "id": "./",
-  "name": "Fluentiq \u2014 Exam Practice",
+  "name": "Fluentiq \u2014 Practice with purpose",
   "short_name": "Fluentiq",
   "description": "Your workspace for IELTS, SAT and PTE practice.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f5f0",
-  "theme_color": "#152e2b",
+  "background_color": "#f7f7f2",
+  "theme_color": "#232321",
   "icons": [
     {
       "src": "./icons/icon-192.png",
