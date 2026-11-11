@@ -1,6 +1,6 @@
 {
   "id": "./",
-  "name": "Fluentiq \u2014 Learning Atelier",
+  "name": "Fluentiq",
   "short_name": "Fluentiq",
   "description": "IELTS goals, daily practice and steady progress.",
   "start_url": "./",
@@ -27,5 +27,6 @@
       "type": "image/svg+xml",
       "purpose": "any"
     }
-  ]
+  ],
+  "orientation": "any"
 }

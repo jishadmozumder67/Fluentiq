@@ -1,5 +1,5 @@
-const CACHE="fluentiq-3.3.10-2c25edce60b7";
-const CORE=["./","./index.html","./icon.svg","./manifest.webmanifest","./privacy.html","./refinements.css","./refinements.js","./identity.css","./brand-icon.png","./icons/icon-192.png","./icons/icon-512.png","./fonts/open-sans-400.woff","./fonts/open-sans-600.woff","./fonts/open-sans-700.woff","./fonts/symbols.woff"];
+const CACHE="fluentiq-ios-3.3.10-6eaa87a5b5b2";
+const CORE=["./","./index.html","./icon.svg","./manifest.webmanifest","./privacy.html","./icons/icon-192.png","./icons/icon-512.png","./fonts/open-sans-400.woff","./fonts/open-sans-600.woff","./fonts/open-sans-700.woff","./fonts/symbols.woff","./ios-support.css","./ios-support.js","./install-ios.html","./icons/apple-touch-icon.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("fluentiq-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener("fetch",e=>{const u=new URL(e.request.url);if(e.request.method!=="GET"||u.origin!==self.location.origin||!u.href.startsWith(self.registration.scope))return;

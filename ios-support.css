@@ -1,0 +1,12 @@
+/* iOS only: preserve the approved Studio identity and adapt platform ergonomics. */
+html.ios-device{-webkit-text-size-adjust:100%}
+html.ios-device .studio :is(input:not([type=checkbox],[type=radio],[type=range]),select,textarea){font-size:16px!important}
+html.ios-device .studio button,html.ios-device .studio a{touch-action:manipulation}
+html.ios-home-screen body{overscroll-behavior-y:none}
+html.ios-home-screen .studio .studio-header{height:calc(72px + env(safe-area-inset-top))!important;padding-top:env(safe-area-inset-top)!important}
+html.ios-home-screen .studio #mobileNav{padding-bottom:calc(7px + env(safe-area-inset-bottom))!important}
+html.ios-home-screen .studio #main{scroll-margin-top:calc(84px + env(safe-area-inset-top))}
+.ios-install-note{margin:22px 0;border:1px solid var(--edge);border-radius:18px;background:var(--paper);padding:22px;color:var(--text)}
+.ios-install-note h2{font-size:20px;margin:0 0 12px}.ios-install-note p{font-size:13px;line-height:1.8;color:var(--sub)}
+html.ios-device dialog#practice{max-height:100dvh!important}
+html.ios-home-screen dialog#practice .modalhead{padding-top:calc(14px + env(safe-area-inset-top))}
